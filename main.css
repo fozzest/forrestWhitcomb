@@ -36,6 +36,7 @@ ol, ul {
 
 blockquote, q {
   quotes: none; }
+ 
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -103,9 +104,9 @@ em {
 
 .thumb-nugget {
   font-family: Karla, Helvetica, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13x;
   color: rgba(0, 0, 0, 0.3);
   letter-spacing: 1px; }
 
@@ -118,19 +119,19 @@ em {
   color: rgba(0, 0, 0, 0.3); }
 
 .pill {
-  border: 0px solid rgba(58, 176, 255, 0.2);
-  background-color: rgba(58, 176, 255, 0.1);
-  border-radius: 100px;
+  /* border: 0px solid rgba(58, 176, 255, 0.2); */
+  /* background-color: rgba(58, 176, 255, 0.1); */
+  /* border-radius: 100px; */
   font-family: Karla, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 13px;
   color: #3ab0ff;
   letter-spacing: .3px;
   line-height: 12px;
   padding: 5px 10px;
   display: inline-block;
   margin-top: -3px;
-  margin-left: 2px;
+  /* margin-left: 2px; */
   vertical-align: middle; }
 
 hr {
@@ -284,7 +285,7 @@ a svg {
 .subhead {
   font-family: Karla, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   color: rgba(0, 0, 0, 0.7);
   line-height: 28px;
   display: block; }
@@ -316,11 +317,12 @@ a svg {
 .site-intro,
 .site-menu,
 .site-menu:after {
-  background: #FFB886;
+  background: #FAACA8;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #28BBEB, #FF637E, #FFE226, #1CD5AF, #28BBEB);
+  background: -webkit-linear-gradient(left,#FAACA8,#DDD6F3,#28BBEB,#FAACA8,#DDD6F3);
+  background: linear-gradient(to right ,#FAACA8,#DDD6F3, #28BBEB,#FAACA8,#DDD6F3);
   /* For Safari 5.1 to 6.0 */
-  background: linear-gradient(to right, #28BBEB, #FF637E, #FFE226, #1CD5AF, #28BBEB);
+  /* background: linear-gradient(to right, #28BBEB, #FF637E, #FFE226, #1CD5AF, #28BBEB); */
   /* Standard syntax (must be last) */
   background-size: 400% 100%;
   background-position: 33.3% 0;
@@ -351,7 +353,7 @@ a svg {
 .site-intro-text {
   font-family: Karla, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 29px;
+  font-size: 48px;
   line-height: 40px;
   color: white;
   text-align: center;
@@ -462,13 +464,7 @@ a svg {
 .image {
   position: relative; }
 
-.image img {
-  transition: all 0.5s ease-in-out; }
 
-.image:hover img {
-  -webkit-filter: brightness(20%);
-  filter: brightness(20%);
-  opacity: 1; }
 
 .image p {
   font-size: 0;
@@ -502,6 +498,7 @@ a svg {
   display: inline-block;
   width: 100%;
   
+  
   margin-top: 2.4%; }
 
 .post-item:nth-child(odd) {
@@ -510,25 +507,19 @@ a svg {
 .post-item:nth-child(even) {
   margin-left: 1%; }
 
-/*
-.post-item img {
-  display: block;
-  border-radius: 3px 3px 0 0;
-  width: 100%;
-  transition: all 0.5s ease-out;
-  margin: 0;
-  margin-top: -2em;
-}
-*/
+
 
 
 .post-item-img {
-  position: relative; }
+  position: relative;
+  border-radius: 25px; }
 
 .post-item-img img {
   display: block;
   width: 100%;
   margin: 0;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
   transition: all 0.5s ease-out; }
 
 .post-item-label {
@@ -537,7 +528,10 @@ a svg {
   transition: all 0.5s ease-out;
   padding: 4% 0;
   background: #fcfcfc;
-  border-top: none; }
+  border-top: none;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+   }
 
 .logo {
   width: 65px;
@@ -555,24 +549,16 @@ a svg {
   margin-bottom: -30px; }
 
 .post-item:hover {
-  box-shadow: -5px 10px 25px 0 rgba(0, 0, 0, 0.15); }
+  box-shadow: -5px 10px 25px 0 rgba(0, 0, 0, 0.15);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+ }
 
 .post-item:hover .post-item-img img {
-  -webkit-filter: brightness(20%);
-  filter: brightness(20%); }
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%); }
 
-.overlay-title {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 43%;
-  z-index: 100;
-  font-size: 1em;
-  text-align: center;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.5s ease-out; }
+
 
 .image:hover .overlay-title,
 .post-item:hover .overlay-title {
@@ -966,9 +952,7 @@ td {
   .offset-by-one-half.column,
   .offset-by-one-half.columns {
     margin-left: 52%; } }
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Self Clearing Goodness */
+
 .container:after,
 .row:after,
 .u-cf {
